@@ -9,7 +9,10 @@ function calculateRemainingTime() {
         end: semesterEndDate
     });
 
-    var days , hours , minutes , seconds;
+    var months, days , hours , minutes , seconds;
+
+    if (duration.months) months = duration.months;
+    else months = 0;
 
     if (duration.days) days = duration.days;
     else days = 0;
@@ -23,7 +26,7 @@ function calculateRemainingTime() {
     if (duration.seconds) seconds = duration.seconds;
     else seconds = 0;
 
-    let formattedDuration = `${days} gün, ${hours} saat, ${minutes} dakika ve ${seconds} saniye`;
+    let formattedDuration = `${months} ay, ${days} gün, ${hours} saat, ${minutes} dakika ve ${seconds} saniye`;
     return formattedDuration;
 };
 
