@@ -39,6 +39,9 @@ header h1 {
     font-size: 250%;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+}
+
+.gradient-background {
     background: linear-gradient(90deg, var(--orange), var(--blue-accent));
     background-clip: text;
     -webkit-background-clip: text;
@@ -95,11 +98,11 @@ header h1 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     flex: 1;
     min-width: 300px;
-    transition: transform 0.2s ease-in-out;
+    transition: box-shadow 0.1s ease-in-out;
 }
 
 .column-container:hover {
-    transform: scale(1.01);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 768px) {
@@ -179,7 +182,7 @@ li ul {
     top: 50%;
     left: 50%;
     width: 1vh;
-    height: 1.8vh;
+    height: 1.5vh;
     border: solid var(--white);
     border-width: 0 3px 3px 0;
     transform: translate(-50%, -60%) rotate(45deg);
